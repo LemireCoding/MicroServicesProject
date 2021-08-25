@@ -1,0 +1,22 @@
+server.port: 7000
+server.error.include-message: always
+
+app:
+  product-service:
+    host: localhost
+    port: 7001
+  recommendation-service:
+    host: localhost
+    port: 7002
+  review-service:
+    host: localhost
+    port: 7004
+
+logging:
+  level:
+    root: INFO
+    com.lemire: DEBUG
+
+---
+spring.profiles: docker
+server.port: 8080
